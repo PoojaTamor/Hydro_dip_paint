@@ -1,0 +1,337 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+   box-sizing: border-box;
+}
+:root {
+    --primary: #FCCD16;
+    --dark: #fff;
+}
+
+::selection{
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.btn {
+    font-weight: 700;
+    transition: .5s;
+}
+
+
+body{
+    font-family: "Instrument Sans", serif;
+
+}
+
+
+.btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+.btn-primary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    color: #000;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    z-index: 99;
+    background-color: #FCCD16 ;
+    border-color: #FCCD16;
+}
+
+.back-to-top:hover{
+    background-color: #FCCD16 ;
+}
+
+.btn-check:checked+.btn-primary:focus, .btn-check:active+.btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.hero-section {
+    background-image: url('../img/bg.png'); 
+    background-size: 110%; /* Start slightly larger for the zoom effect */
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: backgroundZoom 10s ease-in-out infinite; /* Add animation */
+}
+
+.hero-section::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+@keyframes backgroundZoom {
+    0% {
+        background-size: 110%;
+    }
+    50% {
+        background-size: 120%; /* Zoom in */
+    }
+    100% {
+        background-size: 110%; /* Zoom out */
+    }
+}
+  .centerdiv {
+    z-index: 1; /* Bring content above the overlay */
+    position: relative; /* Ensure proper positioning */
+  }
+  
+  .hero-section h1 {
+    color: var(--dark);
+    text-transform: uppercase;
+    line-height: 55px;
+    z-index: 1; /* Ensure text appears above the overlay */
+  }
+  
+  .herotop-text {
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    z-index: 1;
+  }
+  
+  .lead {
+    font-weight: 100 !important;
+    z-index: 1;
+  }
+  
+
+/* -----------------------section2------------------------- */
+.hydro-section {
+    background: linear-gradient(97.86deg, #07080B -8.36%, #434345 34.09%, #151517 97.26%);
+    color: #f1f1f1;
+  }
+
+  .hydro-section h2 {
+    font-weight: 700;
+    color: var(--dark);
+    padding-block: 50px;
+  }
+
+
+  .hydro-subsection{
+    padding-block: 100px;
+  }
+
+  .why-choose-btn {
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+    color: #f1f1f1;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .why-choose-btn:hover {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+
+
+
+  .Hydrocarbontext{
+    width: 500px;
+    color: #D9D9D9;
+    font-weight: 450;
+    font-size: 1.2rem;
+  }
+
+  /* ----------------------------section3------------------------------- */
+
+  .features-section {
+    background: linear-gradient(180deg, #FCCD10 -47.5%, #FDD948 -47.5%, #FFF7D9 7.58%, #FFFFFF 114.29%);
+
+    /* padding: 40px; */
+    /* text-align: left; */
+    padding-block: 80px;
+
+  }
+
+  .feature-box {
+    display: flex;
+    align-items: flex-start;
+    /* margin-bottom: 20px; */
+  }
+
+  .feature-icon {
+    background-color: #ffc107;
+    color: white;
+    font-size: 45px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+  }
+
+  .feature-box:hover  .feature-icon{
+    transform: rotate(360deg);
+  }
+
+  .feature-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+
+  .feature-text {
+    color: #676767;
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 350px;
+  }
+
+  /* ------------------------------section4---------------------- */
+  /* ------------------------------section5---------------------- */
+  .section5 h2 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-block: 50px;
+    color: #000;
+    /* margin: 10px 0; */
+}
+.section5 p {
+    font-size: 1.2rem;
+    color: #262323;
+    width: 450px;
+}
+.highlight {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #000;
+}
+.highlight::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #ffcd00;
+    margin-right: 10px;
+    /* border-radius: 10px; */
+}
+
+.section5-center{
+
+    padding-left: 80px;
+}
+  
+
+  /* ------------------------------section6---------------------- */
+
+  .section-features6 {
+    padding: 100px 0 50px 0px ;
+}
+.feature-block {
+    display: flex;
+    margin-bottom: 30px;
+}
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #FFBB17; /* Gold color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.feature-title6 {
+    font-weight: 600;
+    color: #000;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.feature-description6 {
+    color: #262323;
+    font-size: 1.2rem;
+    width: 450px;
+
+}
+
+ 
+  /* ------------------------------section8---------------------- */
+
+ .footer-heading{
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 600;
+ } 
+
+.footer-btn{
+    background-color: #FCCD10;
+    border: 1px solid #f1f1f1;
+    color: black;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-weight: 400;
+    display: inline-block;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.footer-btn a{
+    color: #000;
+    font-size: 1.5rem;
+}
